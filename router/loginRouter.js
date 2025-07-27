@@ -4,6 +4,6 @@ const htmlDecorationHandler = require('../middlewares/common/htmlDecorateHandler
 
 const router = express.Router()
 
-router.get('/', loginController)
+router.get('/', htmlDecorationHandler('index'), loginController)
 
 module.exports = router
