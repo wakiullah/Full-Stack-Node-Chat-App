@@ -1,9 +1,10 @@
 const express = require('express')
-const { usersController } = require('../controllers/userController')
+const {inboxController} = require('../controllers/inboxController')
 const htmlDecorationHandler = require('../middlewares/common/htmlDecorateHandler')
+
 
 const router = express.Router()
 
-router.get('/', htmlDecorationHandler('Users'), usersController)
+router.get('/', htmlDecorationHandler('Inbox'), inboxController)
 
 module.exports = router

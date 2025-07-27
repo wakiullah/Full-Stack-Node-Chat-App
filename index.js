@@ -4,7 +4,8 @@ const cookieParser = require('cookie-parser');
 const path = require('node:path')
 const dotenv = require('dotenv')
 const loginRouter = require('./router/loginRouter')
-// const usersRouter = require('./router/usersRouter')
+const usersRouter = require('./router/usersRouter')
+const inboxRouter = require('./router/inboxRouter')
 const app = express()
 dotenv.config()
 
@@ -31,8 +32,8 @@ app.use(express.static(path.join(__dirname, "public")))
 app.use(cookieParser())
 
 app.use('/', loginRouter)
-// // app.use('/users', usersRouter)
-// // app.use('/inbox', inboxRouter)
+app.use('/users', usersRouter)
+app.use('/inbox', inboxRouter)
 
 app.use(notFoundError)
 app.use(errorHandler)

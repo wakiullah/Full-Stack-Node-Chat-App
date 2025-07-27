@@ -5,6 +5,8 @@ function NotFoundError(req, res, next) {
 }
 
 function ErrorHandler(err, req, res, next) {
+    console.log(err);
+
     res.render('error', {
         title: "Error Page"
     })

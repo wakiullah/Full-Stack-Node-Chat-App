@@ -1,9 +1,6 @@
-function loginController(req, res, next) {
-console.log('loginController called');
+function loginController(req, res) {
 
-    res.render('index', {
-        title: "Login- Chat Application"
-    })
+    res.render('index')
 
 }
 
