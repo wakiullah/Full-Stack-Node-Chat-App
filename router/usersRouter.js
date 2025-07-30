@@ -1,9 +1,9 @@
 const express = require('express')
 const { usersController, addNewUser } = require('../controllers/userController')
 const htmlDecorationHandler = require('../middlewares/common/htmlDecorateHandler')
-const avatarUpload = require('../middlewares/users/avatarUpload')
-const { addUserValidator, addUserValidatorHandler } = require('../middlewares/users/addUserValidator')
 
+const { addUserValidator, addUserValidatorHandler } = require('../middlewares/users/addUserValidator')
+const avatarUpload = require('../middlewares/users/avatarUpload')
 const router = express.Router()
 
 router.get('/', htmlDecorationHandler('Users'), usersController)
